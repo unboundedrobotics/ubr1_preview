@@ -1,0 +1,33 @@
+.header-override {
+  margin-bottom: 20px;
+}
+.header-override p {
+  padding: 5px;
+  font-size: 1.2em;
+  text-align: right;
+  float: right;
+}
+
+.header-override li {
+  float: right;
+}
+
+.wy-body-for-nav {
+  background: #ffffff;
+}
+
+/*.wy-nav-side {
+  background: #df5a0c !important;
+}*/
+
+/*.wy-side-nav-search {
+  background: #df5a0c !important;
+}*/
+
+.wy-nav-content-wrap {
+  background: #ffffff !important;
+}
+
+.wy-nav-content {
+  background: #ffffff !important;
+}
