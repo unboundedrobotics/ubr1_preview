@@ -1,0 +1,370 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UBR-1 Overview &mdash; Unbounded Robotics UBR-1 Simulation Preview</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Unbounded Robotics UBR-1 Simulation Preview" href="index.html"/>
+        <link rel="next" title="Simulating the UBR-1" href="simulator.html"/>
+        <link rel="prev" title="Preview Overview" href="intro.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa">Unbounded Robotics UBR-1 Simulation Preview</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Preview Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#warnings">Warnings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">UBR-1 Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kinematics">Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubr-1-coordinate-system">UBR-1 Coordinate System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">Software</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulating the UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#connecting-with-rviz">Connecting with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#teleoperating-the-simulated-ubr-1">Teleoperating the Simulated UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#differences-and-limitations">Differences and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#configuring-to-use-your-map">Configuring to Use Your Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation">Running Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#debugging-common-issues">Debugging Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Manipulation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#starting-moveit-on-the-ubr-1">Starting MoveIt! on the UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#using-the-moveit-rviz-plugin">Using the MoveIt! RVIZ Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Perception with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#using-camera-data">Using Camera Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#basic-grasping-perception">Basic Grasping Perception</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interfaces_api.html">UBR-1 Standard Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#arm-and-torso-interfaces">Arm and Torso Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#head-interfaces">Head Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#base-interface">Base Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controllers_api.html">Controllers API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#point-head">point_head</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#base-controller">base_controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#follow-joint-trajectory">follow_joint_trajectory</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unbounded Robotics UBR-1 Simulation Preview</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="header-override">
+          <p>
+            <a href="http://www.unboundedrobotics.com/about-us">About Us</a><br/>
+            <a href="http://www.unboundedrobotics.com/ubr-1">UBR-1</a><br/>
+            <a href="http://www.unboundedrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.unboundedrobotics.com"><img src="_static/logo.png" width="300"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>UBR-1 Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/unboundedrobotics/ubr1_preview/blob/doc/overview.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" align="justify">
+            
+  <div class="section" id="ubr-1-overview">
+<h1>UBR-1 Overview<a class="headerlink" href="#ubr-1-overview" title="Permalink to this headline">¶</a></h1>
+<p>This section details the key components of UBR-1, including the kinematics,
+sensors and software.</p>
+<div class="section" id="kinematics">
+<h2>Kinematics<a class="headerlink" href="#kinematics" title="Permalink to this headline">¶</a></h2>
+<p>UBR-1 is a 13-dof mobile manipulator with a mobile base, arm, gripper,
+and pan-tilt head.</p>
+<div class="section" id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
+<p>The robot kinematics can be described using the concepts of joints,
+links, and frames. Each of these is defined and represented in code,
+as well as having a unique name. In general, a single joint will have
+an actuator and a transmission and will connect two links together. A
+link is a rigid body in the kinematic tree, and will have a coordinate
+frame, but not all frames are associated with links.  There are also
+&#8220;fixed&#8221; joints, so some rigid bodies that could be considered one link
+are considered to be two links rigidly joined together.  This is done
+mostly at locations where there is a physical interface between
+components.</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>Link</dt>
+<dd><p class="first last">A link is a rigid body within the robot.  It generally has
+geometry to define visual and collision-space representations, has
+inertial properties, and has a name.  The links for the UBR-1 are
+defined in the &#8220;URDF&#8221; description that can be found in the
+ubr1_description package.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Frame</dt>
+<dd><p class="first last">Frames are geometric entities that represent coordinate
+frames in space.  Every link has an associated frame, but we also
+use frames to represent other things, such as the optical frame of
+a camera, the global map, or the location of a detected
+object. Frames are always defined relative to one another, and
+relationships and transformations between them are tracked using
+the <a class="reference external" href="http://wiki.ros.org/tf">tf</a> package.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Joint</dt>
+<dd><p class="first last">Joints are considered part of the robot, and define the
+relationship between links.  The joints for the UBR-1 are defined
+in the URDF description that can be found in the ubr1_description
+package.  The UBR-1 has mostly rotational joints, but the torso
+and gripper translational, and there are also a number of &#8220;fixed&#8221;
+joints used to represent the notion that two links are part of the
+same rigid body.  Rotational and translational joints are
+generally represented in the same way in the system, and we refer
+to joint &#8220;effort&#8221; instead of force or torque, as well as using
+position, and velocity to represent both linear and angular
+movement.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>In general, the names for a link and the associated frame will be
+similar (e.g. forearm_link and forearm_frame), and the names the
+associated joint will be similar (e.g elbow_flex_joint).</p>
+<div class="align-centered figure align-center">
+<img alt="_images/urdf_links.png" src="_images/urdf_links.png" style="width: 100%;" />
+<p class="caption"><strong>Figure 1:</strong> UBR-1 link names.</p>
+</div>
+<div class="align-centered figure align-center">
+<img alt="_images/urdf_joints.png" src="_images/urdf_joints.png" style="width: 100%;" />
+<p class="caption"><strong>Figure 2:</strong> UBR-1 joint names and direction of positive motion.</p>
+</div>
+</div>
+<div class="section" id="home-pose">
+<h3>Home Pose<a class="headerlink" href="#home-pose" title="Permalink to this headline">¶</a></h3>
+<p>In order to describe the UBR-1 robot pose and joint positions in a
+consistent manner, a <strong>home pose</strong> of the robot has been defined.  At
+the home pose, all joint-angles are considered to be at zero.  In the
+home pose the arm is straight ahead in front of the body, the gripper
+is closed, and the head is centered and level.</p>
+</div>
+</div>
+<div class="section" id="ubr-1-coordinate-system">
+<h2>UBR-1 Coordinate System<a class="headerlink" href="#ubr-1-coordinate-system" title="Permalink to this headline">¶</a></h2>
+<p>The coordinate frames for all links of the UBR-1 are defined to be
+aligned with a world coordinate frame of positive z-axis up, positive
+x-axis forward, and positive y-axis robot-left when the UBR-1 is in
+the home pose. All joint angle conventions are chosen so that at the
+home position, positive motion of the joint causes positive motion
+around one of the positive axes of the joint coordinate system, as
+shown in Figure 2.</p>
+</div>
+<div class="section" id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<p>This robot has a lot of sensors. They measure things, like awesomness.</p>
+<blockquote>
+<div><ul class="simple">
+<li>joint measurements</li>
+<li>head camera</li>
+<li>base laser</li>
+<li>imu in base</li>
+<li>imu in gripper</li>
+<li>awesome sensor</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p><span style="background:yellow">TODO</span>: link to ROS.org for the various tools
+UBR-1 is controlled through the Robot Operating System (ROS). ROS offers a
+number of capabilities that ease robot application development. These include
+things like a build system, command line tools (rostopic), visual tools (rviz),
+tutorials, and robot related software for things like processing camera data
+(opencv) or solving kinematics problems (orocos-kdl). However, the single
+greatest thing that ROS offers, is a large community and standard interfaces
+so that developers can share code. UBR-1 implements these standard interfaces:</p>
+<p><span style="background:yellow">TODO</span>: for each of these, link to appropriate section of docs here on wiki (for
+the robot component) and on ROS.org (for the message type).</p>
+<blockquote>
+<div><ul class="simple">
+<li>The base is controlled through a geometry_msgs/Twist</li>
+<li>The arm is controlled via control_msgs/FollowJointTrajectoryAction</li>
+<li>The head can be controlled through the joint trajectory action, or via a
+control_msgs/PointHeadAction</li>
+<li>The gripper uses a control_msgs/GripperAction</li>
+<li>The head camera outputs sensor_msgs/Image and sensor_msgs/PointCloud2 topics.</li>
+<li>The base laser outputs sensor_msgs/LaserScan topics.</li>
+<li>The IMUs output sensor_msgs/Imu topics.</li>
+</ul>
+</div></blockquote>
+<p>Since ROS developers can use standard interfaces, they can easily release code
+for a broader community to try. ROS consists of many software packages, most of
+which are listed on the ROS.org wiki.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simulator.html" class="btn btn-neutral float-right" title="Simulating the UBR-1">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral" title="Preview Overview"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Unbounded Robotics Inc..
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Controllers API &mdash; Unbounded Robotics UBR-1 Simulation Preview</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Unbounded Robotics UBR-1 Simulation Preview" href="index.html"/>
+        <link rel="next" title="License" href="license.html"/>
+        <link rel="prev" title="UBR-1 Standard Interfaces" href="interfaces_api.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa">Unbounded Robotics UBR-1 Simulation Preview</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Preview Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#warnings">Warnings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">UBR-1 Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#kinematics">Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#ubr-1-coordinate-system">UBR-1 Coordinate System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#software">Software</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Simulating the UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#connecting-with-rviz">Connecting with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#teleoperating-the-simulated-ubr-1">Teleoperating the Simulated UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#differences-and-limitations">Differences and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#configuring-to-use-your-map">Configuring to Use Your Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation">Running Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#debugging-common-issues">Debugging Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Manipulation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#starting-moveit-on-the-ubr-1">Starting MoveIt! on the UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#using-the-moveit-rviz-plugin">Using the MoveIt! RVIZ Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Perception with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#using-camera-data">Using Camera Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#basic-grasping-perception">Basic Grasping Perception</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="interfaces_api.html">UBR-1 Standard Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#arm-and-torso-interfaces">Arm and Torso Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#head-interfaces">Head Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#base-interface">Base Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Controllers API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#point-head">point_head</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#base-controller">base_controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#follow-joint-trajectory">follow_joint_trajectory</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unbounded Robotics UBR-1 Simulation Preview</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="header-override">
+          <p>
+            <a href="http://www.unboundedrobotics.com/about-us">About Us</a><br/>
+            <a href="http://www.unboundedrobotics.com/ubr-1">UBR-1</a><br/>
+            <a href="http://www.unboundedrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.unboundedrobotics.com"><img src="_static/logo.png" width="300"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Controllers API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/unboundedrobotics/ubr1_preview/blob/doc/controllers_api.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" align="justify">
+            
+  <div class="section" id="controllers-api">
+<span id="ubr-controllers-api"></span><h1>Controllers API<a class="headerlink" href="#controllers-api" title="Permalink to this headline">¶</a></h1>
+<p>The ROS API for the controllers in the ubr_controllers package.</p>
+<div class="section" id="point-head">
+<h2>point_head<a class="headerlink" href="#point-head" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">point_head</span></tt> provides an action interface for pointing UBR-1&#8217;s head.</p>
+<div class="section" id="subscribed-topics">
+<h3>Subscribed Topics<a class="headerlink" href="#subscribed-topics" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">point_head/goal</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/PointHead.html">control_msgs/PointHeadGoal</a>)</dt>
+<dd>Target to point the head at and how fast to move the head.</dd>
+<dt><tt class="docutils literal"><span class="pre">point_head/cancel</span></tt> (<a class="reference external" href="http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html">actionlib_msgs/GoalID</a>)</dt>
+<dd>A request to cancel a specific goal.</dd>
+</dl>
+</div>
+<div class="section" id="published-topics">
+<h3>Published Topics<a class="headerlink" href="#published-topics" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">point_head/feedback</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/PointHead.html">control_msgs/PointHeadFeedback</a>)</dt>
+<dd>Empty.</dd>
+<dt><tt class="docutils literal"><span class="pre">point_head/status</span></tt> (<a class="reference external" href="http://docs.ros.org/api/actionlib_msgs/html/msg/GoalStatusArray.html">actionlib_msgs/GoalStatusArray</a>)</dt>
+<dd>Provides status information on goals.</dd>
+<dt><tt class="docutils literal"><span class="pre">point_head/result</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/PointHead.html">control_msgs/PointHeadResult</a>)</dt>
+<dd><span style="background:yellow">TODO</span>: is this populated.</dd>
+</dl>
+</div>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">~stop_with_action</span></tt> (bool, default: False)</dt>
+<dd>Option to stop the controller at the completion of a goal. If false, the controller will
+the final position.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="base-controller">
+<h2>base_controller<a class="headerlink" href="#base-controller" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">base_controller</span></tt> provides the command interface for the UBR-1 base.</p>
+<div class="section" id="id1">
+<h3>Subscribed Topics<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">base_controller/command</span></tt> (<a class="reference external" href="http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html">geometry_msgs/Twist</a>)</dt>
+<dd>The standard ROS interface for controlling a mobile base.</dd>
+</dl>
+</div>
+<div class="section" id="id2">
+<h3>Published Topics<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">odom</span></tt> (<a class="reference external" href="http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html">nav_msgs/Odometry</a>)</dt>
+<dd>The computed odometry of the base.</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">~base_frame</span></tt> (string, default: &#8220;base_link&#8221;)</dt>
+<dd>Name of the base frame.</dd>
+<dt><tt class="docutils literal"><span class="pre">~max_acceleration_x</span></tt> (double, default: 0.5)</dt>
+<dd>Maximum forward acceleration of the UBR-1.</dd>
+<dt><tt class="docutils literal"><span class="pre">~max_acceleration_r</span></tt> (double, default: 2.97044)</dt>
+<dd>Maximum angular acceleration of the UBR-1.</dd>
+<dt><tt class="docutils literal"><span class="pre">~max_velocity_x</span></tt> (double, default: 1.0)</dt>
+<dd>Maximum forward velocity of the UBR-1.</dd>
+<dt><tt class="docutils literal"><span class="pre">~max_velocity_r</span></tt> (double, default: 4.45566)</dt>
+<dd>Maximum angular velocity of the UBR-1.</dd>
+<dt><tt class="docutils literal"><span class="pre">~odometry_frame</span></tt> (string, default: &#8220;odom&#8221;)</dt>
+<dd>Name of the odometric frame, if publishing tf.</dd>
+<dt><tt class="docutils literal"><span class="pre">~publish_tf</span></tt> (bool, default: True)</dt>
+<dd>Option to publish tf.</dd>
+<dt><tt class="docutils literal"><span class="pre">~radians_per_meter</span></tt> (double, default: 17.497814374)</dt>
+<dd>Radian per meter of the UBR-1 base.</dd>
+<dt><tt class="docutils literal"><span class="pre">~timeout</span></tt> (double, default: 0.25)</dt>
+<dd>Amount of time between commands before stopping the base.</dd>
+<dt><tt class="docutils literal"><span class="pre">~track_width</span></tt> (double, default: 0.33665)</dt>
+<dd>Track width of the UBR-1. This is typically calibrated using ubr_calibration,
+and stored in the /etc/ros/&lt;distro&gt;/robot.launch file.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="follow-joint-trajectory">
+<h2>follow_joint_trajectory<a class="headerlink" href="#follow-joint-trajectory" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">follow_joint_trajectory</span></tt> provides a trjectory interface for the configured joints defined by the joints parameter.</p>
+<div class="section" id="id4">
+<h3>Subscribed Topics<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">~/goal</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/FollowJointTrajectory.html">control_msgs/FollowJointTrajectoryGoal</a>)</dt>
+<dd>Trajectory for the listed joints to follow with path and goal tolerances.</dd>
+<dt><tt class="docutils literal"><span class="pre">~/cancel</span></tt> (<a class="reference external" href="http://docs.ros.org/api/actionlib_msgs/html/msg/GoalID.html">actionlib_msgs/GoalID</a>)</dt>
+<dd>A request to cancel a specific goal.</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h3>Published Topics<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">~/feedback</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/FollowJointTrajectory.html">control_msgs/FollowJointTrajectoryFeedback</a>)</dt>
+<dd>Current state, error, and goal of the trajectory.</dd>
+<dt><tt class="docutils literal"><span class="pre">~/status</span></tt> (<a class="reference external" href="http://docs.ros.org/api/actionlib_msgs/html/msg/GoalStatusArray.html">actionlib_msgs/GoalStatusArray</a>)</dt>
+<dd>Provides status information on goals.</dd>
+<dt><tt class="docutils literal"><span class="pre">~/result</span></tt> (<a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/FollowJointTrajectory.html">control_msgs/FollowJointTrajectoryResult</a>)</dt>
+<dd>Provides result of trajectory following.</dd>
+</dl>
+</div>
+<div class="section" id="id8">
+<h3>Parameters<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">~joints</span></tt> ([string], default: NONE)</dt>
+<dd>List of joint names.</dd>
+<dt><tt class="docutils literal"><span class="pre">~stop_with_action</span></tt> (bool, default: False)</dt>
+<dd>Option to stop the controller at the completion of a goal. If false, the controller will
+the final position.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="license.html" class="btn btn-neutral float-right" title="License">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="interfaces_api.html" class="btn btn-neutral" title="UBR-1 Standard Interfaces"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Unbounded Robotics Inc..
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

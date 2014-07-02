@@ -1,0 +1,345 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Simulating the UBR-1 &mdash; Unbounded Robotics UBR-1 Simulation Preview</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+    <link rel="top" title="Unbounded Robotics UBR-1 Simulation Preview" href="index.html"/>
+        <link rel="next" title="Navigation with UBR-1" href="navigation.html"/>
+        <link rel="prev" title="UBR-1 Overview" href="overview.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa">Unbounded Robotics UBR-1 Simulation Preview</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Preview Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#warnings">Warnings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">UBR-1 Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#kinematics">Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#ubr-1-coordinate-system">UBR-1 Coordinate System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#software">Software</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Simulating the UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-the-simulator">Starting the Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-with-rviz">Connecting with RVIZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teleoperating-the-simulated-ubr-1">Teleoperating the Simulated UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#differences-and-limitations">Differences and Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building a Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#configuring-to-use-your-map">Configuring to Use Your Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation">Running Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#debugging-common-issues">Debugging Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Manipulation with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#starting-moveit-on-the-ubr-1">Starting MoveIt! on the UBR-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#using-the-moveit-rviz-plugin">Using the MoveIt! RVIZ Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-python">Sending Commands in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#sending-commands-in-c">Sending Commands in C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception.html">Perception with UBR-1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#using-camera-data">Using Camera Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception.html#basic-grasping-perception">Basic Grasping Perception</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interfaces_api.html">UBR-1 Standard Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#arm-and-torso-interfaces">Arm and Torso Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#gripper-interface">Gripper Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#head-interfaces">Head Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces_api.html#base-interface">Base Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controllers_api.html">Controllers API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#point-head">point_head</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#base-controller">base_controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers_api.html#follow-joint-trajectory">follow_joint_trajectory</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Unbounded Robotics UBR-1 Simulation Preview</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="header-override">
+          <p>
+            <a href="http://www.unboundedrobotics.com/about-us">About Us</a><br/>
+            <a href="http://www.unboundedrobotics.com/ubr-1">UBR-1</a><br/>
+            <a href="http://www.unboundedrobotics.com/blog">Blog</a>
+          </p>
+          <a href="http://www.unboundedrobotics.com"><img src="_static/logo.png" width="300"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Simulating the UBR-1</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/unboundedrobotics/ubr1_preview/blob/doc/simulator.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" align="justify">
+            
+  <div class="section" id="simulating-the-ubr-1">
+<h1>Simulating the UBR-1<a class="headerlink" href="#simulating-the-ubr-1" title="Permalink to this headline">¶</a></h1>
+<p>Unbounded Robotics has created a simulation environment for the UBR-1 built on
+the open source simulator <a class="reference external" href="http://gazebosim.org">Gazebo</a>. This simulator
+allows you to test certain pieces of code even when you do not have access to
+a robot, or before running certain code on the actual robot.</p>
+<p>It should be noted that this is a simulation, and is certainly not a perfect
+model of the world or the robot. Results between real world and simulation may
+vary wildly at times. Be sure to also note the limitations and differences
+of the simulated UBR-1 which are listed at the bottom of this page.</p>
+<div class="section" id="starting-the-simulator">
+<h2>Starting the Simulator<a class="headerlink" href="#starting-the-simulator" title="Permalink to this headline">¶</a></h2>
+<p>To start the simulator, you will run one of several roslaunch files. Each roslaunch file
+brings up a different environment. The simplest environment is started by running:</p>
+<div class="highlight-python"><pre>&gt;$ roslaunch ubr1_gazebo simulation.launch</pre>
+</div>
+<p>This environment includes nothing except a robot and the floor. In every environment,
+the robot will be initialized with the arm tucked and the head pointing forward:</p>
+<div class="align-centered figure align-center">
+<img alt="_images/gazebo-simulation-launch.png" src="_images/gazebo-simulation-launch.png" style="width: 100%;" />
+</div>
+<p>There are several other environments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><tt class="docutils literal"><span class="pre">simulation_home.launch</span></tt> brings up a small &#8220;home&#8221; with an environment designed to be
+similar to the RoboCup&#64;Home competition environment.</li>
+<li><tt class="docutils literal"><span class="pre">simulation_grasping.launch</span></tt> brings up a table with some cubes on it for trying out
+manipulation.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="connecting-with-rviz">
+<h2>Connecting with RVIZ<a class="headerlink" href="#connecting-with-rviz" title="Permalink to this headline">¶</a></h2>
+<p>Once your simulator is up and running, you probably want to connect with RVIZ to see
+what is going on in more detail. In a new terminal, run the following:</p>
+<div class="highlight-python"><pre>&gt;$ rosrun rviz rviz</pre>
+</div>
+<p>To setup RVIZ to show the relevant topics, there are a set of config files that can
+be loaded when running various apps. Under &#8220;File | Open Config&#8221; you can navigate to
+the <strong>ubr1_gazebo</strong> package, and in the <strong>config</strong> folder you will find a <strong>default.rviz</strong>
+file which will setup RVIZ to look like this when running the grasping world:</p>
+<div class="align-centered figure align-center">
+<img alt="_images/gazebo-rviz-grasping-config.png" src="_images/gazebo-rviz-grasping-config.png" style="width: 100%;" />
+</div>
+</div>
+<div class="section" id="teleoperating-the-simulated-ubr-1">
+<h2>Teleoperating the Simulated UBR-1<a class="headerlink" href="#teleoperating-the-simulated-ubr-1" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>ubr_teleop</strong> package includes a number of scripts for commanding the robot
+to move its joints in certain ways. The first thing you probably want to do is
+drive the robot around. The <strong>keyboard_telop</strong> node allows you to do this:</p>
+<div class="highlight-python"><pre>&gt;$ rosrun ubr_teleop keyboard_teleop
+Reading from keyboard
+-------------------------
+Use 'WASD' to translate
+Use arrow keys to move head
+Any other key to stop</pre>
+</div>
+<p>Now, if you press the &#8216;w&#8217; key, the robot will drive forward. Hitting any key other
+than WASD or arrows will stop the robot. &#8216;a&#8217; turns left, &#8216;s&#8217; right.</p>
+<p>There is a script for controlling the torso, called <strong>set_torso_pose.py</strong> that takes
+a single parameter, the height of the torso in meters. The torso has a range of 0 to
+about 0.35m:</p>
+<div class="highlight-python"><pre>&gt;$ rosrun ubr_teleop set_torso_pose.py 0.135
+[INFO] [WallTime: 1402534422.712588] [0.000000] Waiting for torso_controller...
+[INFO] [WallTime: 1402534422.925660] [1050.681000] ...connected.
+[INFO] [WallTime: 1402534422.926222] [1050.681000] Setting torso pose to 0.350000
+[INFO] [WallTime: 1402534430.001018] [1057.705000] ...done</pre>
+</div>
+<p>Similarly, the gripper can be controlled between open (0.09m) and closed (0.0m) using
+either a distance or the word &#8220;open&#8221; or &#8220;closed&#8221;:</p>
+<div class="highlight-python"><pre>&gt;$ rosrun ubr_teleop set_gripper_pose.py open
+[INFO] [WallTime: 1402534358.090159] [0.000000] Waiting for gripper_controller...
+[INFO] [WallTime: 1402534358.337175] [986.410000] ...connected
+[INFO] [WallTime: 1402534358.337896] [986.410000] Setting gripper pose to 0.090000
+[INFO] [WallTime: 1402534358.339674] [986.414000] Results:
+position: 0.0899971663187
+effort: 0.00567451527058
+stalled: False
+reached_goal: True</pre>
+</div>
+<p>A final script, called <strong>set_head_pose.py</strong> will allow you to set the head pan
+and tilt:</p>
+<div class="highlight-python"><pre>&gt;$ rosrun ubr_teleop set_head_pose.py 0 0.1</pre>
+</div>
+<p>Will set the head pan to 0 (forward), and tilt to 0.1 (slightly upward).</p>
+<p>One thing to note is how the topics of the mobile base teleop are connected.
+The <strong>keyboard_teleop</strong>
+node publishes to a topic called <tt class="docutils literal"><span class="pre">teleop/cmd_vel</span></tt>. However, the mobile base
+gets it&#8217;s commands from <tt class="docutils literal"><span class="pre">base_controller/command</span></tt>, and most applications will (such
+as navigation) will publish their commands to <tt class="docutils literal"><span class="pre">cmd_vel</span></tt>. The key is a topic multiplexor
+that forwards <tt class="docutils literal"><span class="pre">cmd_vel</span></tt> to <tt class="docutils literal"><span class="pre">base_controller/command</span></tt> by default, but whenever the
+you start pressing keys in <strong>keyboard_teleop</strong> the multiplexor will override <tt class="docutils literal"><span class="pre">cmd_vel</span></tt>
+with the values sent to <tt class="docutils literal"><span class="pre">teleop/cmd_vel</span></tt>.</p>
+</div>
+<div class="section" id="differences-and-limitations">
+<h2>Differences and Limitations<a class="headerlink" href="#differences-and-limitations" title="Permalink to this headline">¶</a></h2>
+<p>The simulated robot is not exactly the same as the real robot. Notable differences
+include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The simulator does not simulate the IMUs at this time. Additionally, because there
+is no IMU data, the odom_combined tf frame is created only by using odometry. On
+the real robot, odometry is fused with the IMU using <a class="reference external" href="http://wiki.ros.org/graft">Graft</a>.</li>
+<li>The <strong>head_camera/depth/*</strong> topics do not exist due to a current limitation with the
+gazebo_ros interface.</li>
+<li>The robot may eventually wander away when sitting still due to accumulated error in the
+simulation. Rest assured, the real robot will not wander off unless you command it to do so.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="navigation.html" class="btn btn-neutral float-right" title="Navigation with UBR-1">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="UBR-1 Overview"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Unbounded Robotics Inc..
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
