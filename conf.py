@@ -127,7 +127,7 @@ html_context = {
   "display_github": True,
   "github_user": "unboundedrobotics",
   "github_repo": "ubr1_preview",
-  "github_version": "doc/",
+  "github_version": "documentation/",
   "conf_py_path": "",
   "source_suffix": source_suffix,
   "css_files": ['_static/theme_overrides.css']
